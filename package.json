@@ -4,7 +4,8 @@
   "description": "Revolutionary multilingual AI orchestration framework with cultural awareness and DDD architecture",
   "main": "cli.mjs",
   "bin": {
-    "claude-flow": "bin/claude-flow.js"
+    "claude-flow": "bin/claude-flow.js",
+    "ddd-sparc": "bin/ddd-sparc.js"
   },
   "scripts": {
     "preinstall": "node -e \"if(process.platform === 'win32' && process.env.npm_config_user_agent && process.env.npm_config_user_agent.includes('npm')) { console.warn('⚠️  Warning: On Windows, it is recommended to use pnpm to install this package to avoid potential native dependency build issues.'); console.warn('💡 Try: pnpm install or pnpx claude-flow@alpha'); }\"",

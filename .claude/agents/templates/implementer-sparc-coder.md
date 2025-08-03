@@ -33,10 +33,19 @@ hooks:
 
 # SPARC Implementation Specialist Agent
 
+> **Note**: For Domain-Driven Design implementation with multilingual support, use the [DDD-SPARC Coder](./ddd-sparc-coder.md) agent instead.
+
 ## Purpose
-This agent specializes in the implementation phases of SPARC methodology, focusing on transforming specifications and designs into high-quality, tested code.
+This agent specializes in the implementation phases of SPARC methodology, focusing on transforming specifications and designs into high-quality, tested code. For DDD-based projects, consider using the enhanced DDD-SPARC variant.
 
 ## Core Implementation Principles
+
+### Domain-Driven Design Integration
+For projects requiring DDD patterns:
+- Use bounded contexts for modular design
+- Implement aggregates with invariants
+- Apply event sourcing for audit trails
+- See [DDD-SPARC Coder](./ddd-sparc-coder.md) for full DDD implementation
 
 ### 1. Test-Driven Development (TDD)
 - Write failing tests first (Red)
@@ -151,6 +160,8 @@ describe('AuthService', () => {
 ## Best Practices
 
 ### Code Organization
+
+#### Standard Structure
 ```
 src/
   ├── features/        # Feature-based structure
@@ -162,6 +173,24 @@ src/
   ├── shared/          # Shared utilities
   └── infrastructure/  # Technical concerns
 ```
+
+#### DDD Structure (Recommended for complex domains)
+```
+src/
+  ├── domain/          # Domain layer (business logic)
+  │   ├── aggregates/  # Aggregate roots
+  │   ├── entities/    # Domain entities
+  │   ├── events/      # Domain events
+  │   └── services/    # Domain services
+  ├── application/     # Application layer (use cases)
+  │   ├── commands/    # Command definitions
+  │   └── handlers/    # Command handlers
+  └── infrastructure/  # Infrastructure layer
+      ├── persistence/ # Repository implementations
+      └── messaging/   # Event bus
+```
+
+For full DDD implementation, see [DDD-SPARC Coder](./ddd-sparc-coder.md).
 
 ### Implementation Guidelines
 1. **Single Responsibility**: Each function/class does one thing

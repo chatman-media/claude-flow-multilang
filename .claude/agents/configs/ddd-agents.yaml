@@ -1,0 +1,318 @@
+# DDD Agent Configuration for Claude Flow Multilang
+# Specialized agents for Domain-Driven Design implementation
+
+agents:
+  ddd-sparc-coder:
+    name: DDD-SPARC Coder
+    type: development
+    priority: high
+    description: Domain-Driven Design implementation with multilingual support
+    capabilities:
+      - domain-modeling
+      - bounded-context-design
+      - aggregate-implementation
+      - command-handling
+      - event-sourcing
+      - multilingual-support
+      - test-driven-development
+      - code-generation
+    template: ddd-sparc-coder.md
+    languages:
+      - en
+      - ru
+      - ja
+      - zh_cn
+      - de
+      - fr
+      - es
+      - pt
+      - ko
+      - tr
+      - th
+      - it
+      - hi
+      - zh_tw
+
+  domain-expert:
+    name: Domain Expert
+    type: analysis
+    priority: high
+    description: Domain discovery and event storming facilitator
+    capabilities:
+      - event-storming
+      - domain-analysis
+      - ubiquitous-language
+      - bounded-context-identification
+      - aggregate-discovery
+    hooks:
+      pre: |
+        echo "🎯 Domain Expert: Starting domain discovery"
+        echo "📊 Preparing event storming session"
+      post: |
+        echo "✅ Domain model discovered and documented"
+
+  aggregate-designer:
+    name: Aggregate Designer
+    type: design
+    priority: high
+    description: Design aggregates with invariants and business rules
+    capabilities:
+      - aggregate-design
+      - invariant-definition
+      - entity-modeling
+      - value-object-design
+      - domain-service-design
+    hooks:
+      pre: |
+        echo "🏗️ Aggregate Designer: Modeling domain aggregates"
+      post: |
+        echo "✅ Aggregates designed with invariants"
+
+  command-architect:
+    name: Command Architect
+    type: architecture
+    priority: medium
+    description: Design command and query patterns with handlers
+    capabilities:
+      - command-design
+      - query-design
+      - handler-implementation
+      - cqrs-pattern
+      - validation-rules
+    hooks:
+      pre: |
+        echo "📝 Command Architect: Designing command patterns"
+      post: |
+        echo "✅ Commands and handlers implemented"
+
+  event-sourcer:
+    name: Event Sourcer
+    type: development
+    priority: medium
+    description: Implement event sourcing and event-driven patterns
+    capabilities:
+      - event-design
+      - event-store
+      - event-projection
+      - event-replay
+      - saga-pattern
+    hooks:
+      pre: |
+        echo "📡 Event Sourcer: Implementing event patterns"
+      post: |
+        echo "✅ Event sourcing configured"
+
+  multilingual-adapter:
+    name: Multilingual Adapter
+    type: localization
+    priority: medium
+    description: Adapt domain models for multiple languages
+    capabilities:
+      - translation-management
+      - cultural-adaptation
+      - locale-formatting
+      - language-detection
+      - i18n-implementation
+    supported_languages:
+      - en
+      - ru
+      - ja
+      - zh_cn
+      - de
+      - fr
+      - es
+      - pt
+      - ko
+      - tr
+      - th
+      - it
+      - hi
+      - zh_tw
+    hooks:
+      pre: |
+        echo "🌍 Multilingual Adapter: Configuring language support"
+      post: |
+        echo "✅ Multilingual support implemented"
+
+  repository-implementer:
+    name: Repository Implementer
+    type: development
+    priority: medium
+    description: Implement repository pattern with persistence
+    capabilities:
+      - repository-pattern
+      - persistence-implementation
+      - query-optimization
+      - caching-strategy
+      - transaction-management
+    hooks:
+      pre: |
+        echo "💾 Repository Implementer: Setting up persistence"
+      post: |
+        echo "✅ Repositories implemented with optimizations"
+
+# Swarm configurations for DDD projects
+swarms:
+  ddd-development:
+    name: DDD Development Swarm
+    description: Complete DDD implementation team
+    topology: hierarchical
+    agents:
+      - domain-expert
+      - aggregate-designer
+      - ddd-sparc-coder
+      - command-architect
+      - event-sourcer
+      - repository-implementer
+      - multilingual-adapter
+    workflow:
+      - phase: discovery
+        lead: domain-expert
+        participants: [aggregate-designer]
+      - phase: design
+        lead: aggregate-designer
+        participants: [command-architect, event-sourcer]
+      - phase: implementation
+        lead: ddd-sparc-coder
+        participants: [repository-implementer, multilingual-adapter]
+      - phase: testing
+        lead: ddd-sparc-coder
+        participants: [all]
+
+  bounded-context-team:
+    name: Bounded Context Team
+    description: Team for single bounded context implementation
+    topology: mesh
+    agents:
+      - aggregate-designer
+      - ddd-sparc-coder
+      - command-architect
+      - repository-implementer
+    workflow:
+      parallel: true
+      coordination: event-driven
+
+  event-driven-team:
+    name: Event-Driven Team
+    description: Specialized team for event sourcing
+    topology: star
+    agents:
+      - event-sourcer  # Central coordinator
+      - ddd-sparc-coder
+      - command-architect
+      - repository-implementer
+    workflow:
+      central: event-sourcer
+      pattern: event-sourcing
+
+# Command patterns for DDD operations
+commands:
+  create-bounded-context:
+    description: Create a new bounded context
+    required_agents:
+      - domain-expert
+      - aggregate-designer
+    parameters:
+      - name: context_name
+        type: MultilingualString
+        required: true
+      - name: description
+        type: MultilingualString
+        required: true
+      - name: team
+        type: string
+        required: false
+
+  design-aggregate:
+    description: Design a domain aggregate
+    required_agents:
+      - aggregate-designer
+      - ddd-sparc-coder
+    parameters:
+      - name: aggregate_name
+        type: MultilingualString
+        required: true
+      - name: properties
+        type: PropertyDefinition[]
+        required: true
+      - name: invariants
+        type: string[]
+        required: true
+
+  implement-command-handler:
+    description: Implement a command handler
+    required_agents:
+      - command-architect
+      - ddd-sparc-coder
+    parameters:
+      - name: command_type
+        type: string
+        required: true
+      - name: aggregate
+        type: string
+        required: true
+      - name: validation_rules
+        type: ValidationRule[]
+        required: false
+
+  generate-ddd-code:
+    description: Generate code from DDD models
+    required_agents:
+      - ddd-sparc-coder
+      - repository-implementer
+    parameters:
+      - name: context_id
+        type: string
+        required: true
+      - name: language
+        type: string
+        default: typescript
+      - name: include_tests
+        type: boolean
+        default: true
+      - name: include_repositories
+        type: boolean
+        default: true
+
+# Integration hooks for DDD workflow
+hooks:
+  pre-aggregate-creation:
+    description: Validate aggregate design before creation
+    script: |
+      echo "Validating aggregate design..."
+      # Check for required invariants
+      # Validate property definitions
+      # Ensure multilingual support
+
+  post-command-execution:
+    description: After command execution
+    script: |
+      echo "Command executed, publishing events..."
+      # Publish domain events
+      # Update projections
+      # Store in event store
+
+  pre-code-generation:
+    description: Prepare for code generation
+    script: |
+      echo "Preparing code generation..."
+      # Validate domain model
+      # Check for conflicts
+      # Prepare templates
+
+# Performance optimizations for DDD
+optimizations:
+  event-store:
+    snapshot_interval: 100
+    compression: true
+    async_processing: true
+  
+  repositories:
+    cache_enabled: true
+    cache_ttl: 3600
+    connection_pooling: true
+    
+  multilingual:
+    translation_cache: true
+    lazy_loading: true
+    cdn_enabled: true
