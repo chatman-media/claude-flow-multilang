@@ -55,7 +55,10 @@
     "prepack": "echo 'Alpha release - skipping build for now'",
     "postpack": "echo 'Package created successfully'",
     "prepare-publish": "node scripts/prepare-publish.js",
-    "start": "node server.js"
+    "start": "node server.js",
+    "example:ddd": "tsx examples/ddd-development-example.ts",
+    "example:commands": "tsx examples/ddd-commands-example.ts",
+    "example:multilang": "tsx examples/multilang-workflow-example.ts"
   },
   "keywords": [
     "claude",
