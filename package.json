@@ -56,9 +56,10 @@
     "postpack": "echo 'Package created successfully'",
     "prepare-publish": "node scripts/prepare-publish.js",
     "start": "node server.js",
-    "example:ddd": "tsx examples/ddd-development-example.ts",
-    "example:commands": "tsx examples/ddd-commands-example.ts",
-    "example:multilang": "tsx examples/multilang-workflow-example.ts"
+    "example:ddd": "node examples/ddd-example.js",
+    "example:ddd:ts": "node --loader ts-node/esm examples/ddd-development-example.ts",
+    "example:commands": "node --loader ts-node/esm examples/ddd-commands-example.ts",
+    "example:multilang": "node --loader ts-node/esm examples/multilang-workflow-example.ts"
   },
   "keywords": [
     "claude",

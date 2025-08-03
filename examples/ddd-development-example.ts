@@ -7,9 +7,9 @@ import { DDDDevelopmentService, DDDPhase } from '../src/domain/application/ddd-d
 import { SupportedLanguage } from '../src/polyglot/types.js';
 import { PolyglotAgent } from '../src/polyglot/polyglot-agent.js';
 import { MultilingualString } from '../src/domain/base-domain.js';
-import { ConsoleLogger } from '../src/core/logger.js';
+import { Logger } from '../src/core/logger.js';
 
-const logger = new ConsoleLogger('ddd-example');
+const logger = new Logger();
 
 /**
  * Example: Complete DDD Development Workflow

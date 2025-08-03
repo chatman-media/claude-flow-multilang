@@ -15,10 +15,10 @@ import {
 } from '../src/domain/application/create-product-handler.js';
 import { SupportedLanguage } from '../src/polyglot/types.js';
 import { PolyglotAgent } from '../src/polyglot/polyglot-agent.js';
-import { ConsoleLogger } from '../src/core/logger.js';
+import { Logger } from '../src/core/logger.js';
 import { EntityId, MultilingualString } from '../src/domain/base-domain.js';
 
-const logger = new ConsoleLogger('ddd-commands');
+const logger = new Logger();
 
 /**
  * Mock product repository for the example

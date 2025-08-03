@@ -9,9 +9,9 @@ import { PolyglotAgent } from '../src/polyglot/polyglot-agent.js';
 import { LanguageManager } from '../src/i18n/language-manager.js';
 import { CulturalContextAnalyzer } from '../src/cultural/context-analyzer.js';
 import { MultilingualCommandParser } from '../src/polyglot/command-parser.js';
-import { ConsoleLogger } from '../src/core/logger.js';
+import { Logger } from '../src/core/logger.js';
 
-const logger = new ConsoleLogger('multilang-example');
+const logger = new Logger();
 
 /**
  * Example: Multilingual AI Assistant Workflow
