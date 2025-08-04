@@ -70,7 +70,7 @@ class FallbackMemoryStore {
     
     if (isWindows()) {
       console.error(
-        `[${new Date().toISOString()}] INFO [fallback-store] Windows detected. For persistent storage options, see: https://github.com/ruvnet/claude-code-flow/docs/windows-installation.md`,
+        `[${new Date().toISOString()}] INFO [fallback-store] Windows detected. For persistent storage options, see: https://github.com/chatman-media/claude-flow-multilang/docs/windows-installation.md`,
       );
     } else {
       console.error(

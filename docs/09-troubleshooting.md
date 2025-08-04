@@ -795,8 +795,8 @@ claude-flow self-check --fix-issues --report-problems
 ### Support Resources
 
 **Community Support:**
-- **GitHub Issues**: https://github.com/ruvnet/claude-code-flow/issues
-- **Discussions**: https://github.com/ruvnet/claude-code-flow/discussions
+- **GitHub Issues**: https://github.com/chatman-media/claude-flow-multilang/issues
+- **Discussions**: https://github.com/chatman-media/claude-flow-multilang/discussions
 - **Discord Community**: https://discord.gg/claude-flow
 
 **Professional Support:**

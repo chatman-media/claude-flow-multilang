@@ -162,8 +162,8 @@ Claude Flow is licensed under the MIT License. See [LICENSE](../../LICENSE) for 
 ## 🆘 Support
 
 - **Documentation**: This directory
-- **Issues**: [GitHub Issues](https://github.com/ruvnet/claude-flow/issues)
-- **Discussions**: [GitHub Discussions](https://github.com/ruvnet/claude-flow/discussions)
+- **Issues**: [GitHub Issues](https://github.com/chatman-media/claude-flow-multilang/issues)
+- **Discussions**: [GitHub Discussions](https://github.com/chatman-media/claude-flow-multilang/discussions)
 - **Email**: support@claude-flow.ai
 
 ---

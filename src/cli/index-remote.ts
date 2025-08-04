@@ -52,7 +52,7 @@ EXAMPLES:
   claude-flow memory store key "value"
   claude-flow status                  # Check system status
 
-For more info: https://github.com/ruvnet/claude-code-flow
+For more info: https://github.com/chatman-media/claude-flow-multilang
 `);
 }
 
@@ -94,7 +94,7 @@ async function main() {
       console.log('   - coordination.md (Agent coordination documentation)');
       console.log('   - Memory folder structure');
       console.log('\n💡 To run locally, clone the repo and use:');
-      console.log('   git clone https://github.com/ruvnet/claude-code-flow.git');
+      console.log('   git clone https://github.com/chatman-media/claude-flow-multilang.git');
       console.log('   cd claude-code-flow');
       console.log('   npm install -g claude-flow');
       console.log('   claude-flow init');
@@ -109,11 +109,11 @@ async function main() {
       console.log(chalk.gray('  # Or using Deno'));
       console.log('  deno install --allow-all --name claude-flow \\');
       console.log(
-        '    https://raw.githubusercontent.com/ruvnet/claude-code-flow/main/src/cli/index.ts',
+        '    https://raw.githubusercontent.com/chatman-media/claude-flow-multilang/main/src/cli/index.ts',
       );
       console.log('');
       console.log(chalk.gray('  # Or clone and build from source'));
-      console.log('  git clone https://github.com/ruvnet/claude-code-flow.git');
+      console.log('  git clone https://github.com/chatman-media/claude-flow-multilang.git');
       console.log('  cd claude-code-flow');
       console.log('  deno task build');
       break;
@@ -125,10 +125,10 @@ async function main() {
       console.log('\n🌐 Or run directly with Deno:');
       console.log('   deno install --allow-all --name claude-flow \\');
       console.log(
-        '     https://raw.githubusercontent.com/ruvnet/claude-code-flow/main/src/cli/index.ts',
+        '     https://raw.githubusercontent.com/chatman-media/claude-flow-multilang/main/src/cli/index.ts',
       );
-      console.log('\n📚 Documentation: https://github.com/ruvnet/claude-code-flow');
-      console.log('💬 Issues: https://github.com/ruvnet/claude-code-flow/issues');
+      console.log('\n📚 Documentation: https://github.com/chatman-media/claude-flow-multilang');
+      console.log('💬 Issues: https://github.com/chatman-media/claude-flow-multilang/issues');
       break;
   }
 }

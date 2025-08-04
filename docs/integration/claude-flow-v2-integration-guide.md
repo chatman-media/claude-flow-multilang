@@ -1215,8 +1215,8 @@ node --expose-gc -e "global.gc()"
 ### Support Resources
 
 - **Documentation**: `/workspaces/claude-code-flow/docs/`
-- **GitHub Issues**: https://github.com/ruvnet/claude-code-flow/issues
-- **Community**: https://github.com/ruvnet/claude-code-flow/discussions
+- **GitHub Issues**: https://github.com/chatman-media/claude-flow-multilang/issues
+- **Community**: https://github.com/chatman-media/claude-flow-multilang/discussions
 - **Performance Reports**: `/workspaces/claude-code-flow/benchmark/reports/`
 
 ---

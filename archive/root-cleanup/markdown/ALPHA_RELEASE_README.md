@@ -33,7 +33,7 @@ npx claude-flow@2.0.0-alpha.1
 ### Running in Development Mode
 ```bash
 # Clone the repository
-git clone https://github.com/ruvnet/claude-code-flow.git
+git clone https://github.com/chatman-media/claude-flow-multilang.git
 cd claude-code-flow
 
 # Install dependencies
@@ -85,8 +85,8 @@ This alpha release was achieved through coordinated swarm execution:
 
 ## 📞 Support
 
-- **Issues**: https://github.com/ruvnet/claude-code-flow/issues
-- **Documentation**: https://github.com/ruvnet/claude-code-flow/wiki
+- **Issues**: https://github.com/chatman-media/claude-flow-multilang/issues
+- **Documentation**: https://github.com/chatman-media/claude-flow-multilang/wiki
 - **Discord**: [Coming Soon]
 
 ---

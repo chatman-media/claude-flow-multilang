@@ -434,4 +434,4 @@ const results = await batchInitCommand(['project1', 'project2'], {
 
 The Claude-Flow batch initialization system provides enterprise-grade capabilities for managing multiple project setups efficiently. With parallel processing, comprehensive monitoring, and extensive customization options, it scales from simple multi-project setups to complex enterprise deployments.
 
-For additional support and examples, see the `/examples` directory and visit the [Claude-Flow documentation](https://github.com/ruvnet/claude-code-flow).
+For additional support and examples, see the `/examples` directory and visit the [Claude-Flow documentation](https://github.com/chatman-media/claude-flow-multilang).

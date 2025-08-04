@@ -56,6 +56,6 @@ You can customize this environment by:
 - Creating mode-specific templates in \`templates/\`
 - Adding project-specific configurations in \`configs/\`
 
-For more information, see: https://github.com/ruvnet/claude-code-flow/docs/sparc.md
+For more information, see: https://github.com/chatman-media/claude-flow-multilang/docs/sparc.md
 `;
 }

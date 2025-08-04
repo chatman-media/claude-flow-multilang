@@ -91,12 +91,12 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ruvnet/claude-code-flow.git"
+    "url": "git+https://github.com/chatman-media/claude-flow-multilang.git"
   },
   "bugs": {
-    "url": "https://github.com/ruvnet/claude-code-flow/issues"
+    "url": "https://github.com/chatman-media/claude-flow-multilang/issues"
   },
-  "homepage": "https://github.com/ruvnet/claude-code-flow#readme",
+  "homepage": "https://github.com/chatman-media/claude-flow-multilang#readme",
   "engines": {
     "node": ">=20.0.0",
     "npm": ">=9.0.0"

@@ -95,10 +95,10 @@ npx claude-flow init --sparc
 ### Method 4: Docker Installation
 ```bash
 # Pull official image
-docker pull ruvnet/claude-flow:2.0.0
+docker pull chatman-media/claude-flow-multilang:2.0.0
 
 # Run with volume mapping
-docker run -it -v $(pwd):/app -p 3000:3000 ruvnet/claude-flow:2.0.0 init --sparc
+docker run -it -v $(pwd):/app -p 3000:3000 chatman-media/claude-flow-multilang:2.0.0 init --sparc
 ```
 
 ## ⚙️ Initial Configuration
@@ -425,7 +425,7 @@ tail -f logs/mcp-server.log
    ```
 
 3. **Join the Community**
-   - [GitHub Discussions](https://github.com/ruvnet/claude-code-flow/discussions)
+   - [GitHub Discussions](https://github.com/chatman-media/claude-flow-multilang/discussions)
    - [Discord Server](https://discord.gg/claude-flow)
    - [YouTube Tutorials](https://youtube.com/@claude-flow)
 
@@ -453,4 +453,4 @@ Ctrl/Cmd + S    # Save current state
 
 **🎉 Setup Complete! You're ready to use Claude Flow v2.0.0**
 
-For additional help, run: `./claude-flow help` or visit our [documentation](https://github.com/ruvnet/claude-code-flow/docs).
+For additional help, run: `./claude-flow help` or visit our [documentation](https://github.com/chatman-media/claude-flow-multilang/docs).

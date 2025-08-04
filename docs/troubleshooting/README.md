@@ -63,7 +63,7 @@ npm error ENOTEMPTY: directory not empty, rename '[source]' -> '[dest]'
 
 If you don't find your issue here:
 
-1. **Search existing issues**: [GitHub Issues](https://github.com/ruvnet/claude-flow/issues)
+1. **Search existing issues**: [GitHub Issues](https://github.com/chatman-media/claude-flow-multilang/issues)
 2. **Check the logs**: Look for specific error patterns in the troubleshooting guides
 3. **Create a new issue**: Include error messages and steps to reproduce
 
@@ -94,5 +94,5 @@ node test/npx-cache-fix-test.js
 
 - [Main Documentation](../README.md)
 - [CLI Reference](../cli-reference.md)
-- [GitHub Issues](https://github.com/ruvnet/claude-flow/issues)
+- [GitHub Issues](https://github.com/chatman-media/claude-flow-multilang/issues)
 - [Alpha Release Notes](../../CHANGELOG.md)

@@ -439,9 +439,9 @@ npx claude-flow@latest init --sparc --force
 ```
 
 #### Community Resources
-- **Documentation**: https://github.com/ruvnet/claude-code-flow/docs
-- **Issues**: https://github.com/ruvnet/claude-code-flow/issues
-- **Discussions**: https://github.com/ruvnet/claude-code-flow/discussions
+- **Documentation**: https://github.com/chatman-media/claude-flow-multilang/docs
+- **Issues**: https://github.com/chatman-media/claude-flow-multilang/issues
+- **Discussions**: https://github.com/chatman-media/claude-flow-multilang/discussions
 
 #### Success Metrics
 

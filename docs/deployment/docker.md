@@ -26,19 +26,19 @@ Claude Flow v2.0.0 provides enterprise-grade Docker support with:
 ### Pull and Run
 ```bash
 # Pull the latest image
-docker pull ruvnet/claude-flow:2.0.0
+docker pull chatman-media/claude-flow-multilang:2.0.0
 
 # Run with interactive shell
-docker run -it -p 3000:3000 ruvnet/claude-flow:2.0.0
+docker run -it -p 3000:3000 chatman-media/claude-flow-multilang:2.0.0
 
 # Run with volume mounting
-docker run -it -v $(pwd):/app -p 3000:3000 ruvnet/claude-flow:2.0.0 init --sparc
+docker run -it -v $(pwd):/app -p 3000:3000 chatman-media/claude-flow-multilang:2.0.0 init --sparc
 ```
 
 ### Build from Source
 ```bash
 # Clone repository
-git clone https://github.com/ruvnet/claude-code-flow.git
+git clone https://github.com/chatman-media/claude-flow-multilang.git
 cd claude-code-flow
 
 # Build Docker image
@@ -61,9 +61,9 @@ docker run -it -p 3000:3000 claude-flow:local
 ### Multi-Architecture Support
 ```bash
 # Available architectures
-docker pull ruvnet/claude-flow:2.0.0 --platform linux/amd64
-docker pull ruvnet/claude-flow:2.0.0 --platform linux/arm64
-docker pull ruvnet/claude-flow:2.0.0 --platform linux/arm/v7
+docker pull chatman-media/claude-flow-multilang:2.0.0 --platform linux/amd64
+docker pull chatman-media/claude-flow-multilang:2.0.0 --platform linux/arm64
+docker pull chatman-media/claude-flow-multilang:2.0.0 --platform linux/arm/v7
 ```
 
 ## ⚙️ Container Configuration
@@ -170,7 +170,7 @@ version: '3.8'
 
 services:
   claude-flow:
-    image: ruvnet/claude-flow:2.0.0-dev
+    image: chatman-media/claude-flow-multilang:2.0.0-dev
     container_name: claude-flow-dev
     ports:
       - "3000:3000"
@@ -204,7 +204,7 @@ version: '3.8'
 
 services:
   claude-flow:
-    image: ruvnet/claude-flow:2.0.0
+    image: chatman-media/claude-flow-multilang:2.0.0
     container_name: claude-flow-prod
     restart: unless-stopped
     ports:
@@ -275,7 +275,7 @@ version: '3.8'
 
 services:
   claude-flow:
-    image: ruvnet/claude-flow:2.0.0
+    image: chatman-media/claude-flow-multilang:2.0.0
     deploy:
       replicas: 3
       update_config:
@@ -393,7 +393,7 @@ spec:
     spec:
       containers:
       - name: claude-flow
-        image: ruvnet/claude-flow:2.0.0
+        image: chatman-media/claude-flow-multilang:2.0.0
         ports:
         - containerPort: 3000
           name: http
@@ -567,7 +567,7 @@ docker inspect claude-flow --format='{{range .State.Health.Log}}{{.End}} | {{.Ex
 docker logs claude-flow
 
 # Run with debug
-docker run -it --entrypoint /bin/sh ruvnet/claude-flow:2.0.0
+docker run -it --entrypoint /bin/sh chatman-media/claude-flow-multilang:2.0.0
 ```
 
 #### 2. Permission Errors

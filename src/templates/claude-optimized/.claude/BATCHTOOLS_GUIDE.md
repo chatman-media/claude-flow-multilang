@@ -1038,4 +1038,4 @@ Batchtools are a powerful feature of Claude-Flow that can significantly improve 
 
 Remember to always consider the nature of your operations, manage resources appropriately, and handle errors gracefully when implementing batchtools in your projects.
 
-For more information and updates, refer to the [Claude-Flow documentation](https://github.com/ruvnet/claude-code-flow) and the SPARC methodology guides.
+For more information and updates, refer to the [Claude-Flow documentation](https://github.com/chatman-media/claude-flow-multilang) and the SPARC methodology guides.

@@ -178,8 +178,8 @@ To use this optimized SPARC mode, you can:
 \`\`\`
 
 For detailed ${mode.name} documentation and batchtools integration guides, see: 
-- Mode Guide: https://github.com/ruvnet/claude-code-flow/docs/sparc-${mode.slug}.md
-- Batchtools Integration: https://github.com/ruvnet/claude-code-flow/docs/batchtools-${mode.slug}.md
+- Mode Guide: https://github.com/chatman-media/claude-flow-multilang/docs/sparc-${mode.slug}.md
+- Batchtools Integration: https://github.com/chatman-media/claude-flow-multilang/docs/batchtools-${mode.slug}.md
 `;
 }
 
@@ -494,8 +494,8 @@ For CI/CD integration and automation with parallel processing:
 See \`/claude-flow-help\` for all available commands and \`/batchtools\` for detailed parallel processing documentation.
 
 For comprehensive SPARC and batchtools documentation, see:
-- SPARC Guide: https://github.com/ruvnet/claude-code-flow/docs/sparc.md
-- Batchtools Documentation: https://github.com/ruvnet/claude-code-flow/docs/batchtools.md
-- Performance Optimization: https://github.com/ruvnet/claude-code-flow/docs/performance.md
+- SPARC Guide: https://github.com/chatman-media/claude-flow-multilang/docs/sparc.md
+- Batchtools Documentation: https://github.com/chatman-media/claude-flow-multilang/docs/batchtools.md
+- Performance Optimization: https://github.com/chatman-media/claude-flow-multilang/docs/performance.md
 `;
 }

@@ -2067,7 +2067,7 @@ Now, please proceed with the task: ${task}`;
         console.log(`  ${blue('claude-flow claude batch')} workflow.json --dry-run`);
         console.log();
         console.log(
-          'For more information, see: https://github.com/ruvnet/claude-code-flow/docs/11-claude-spawning.md',
+          'For more information, see: https://github.com/chatman-media/claude-flow-multilang/docs/11-claude-spawning.md',
         );
       } else if (command === 'swarm' || command === 'swarm-ui') {
         console.log(bold(blue('Claude Swarm Mode')));
@@ -2115,8 +2115,8 @@ Now, please proceed with the task: ${task}`;
         console.log(`  - ${blue('claude-flow swarm')} <objective> --ui`);
         console.log();
         console.log('For more information, see:');
-        console.log('  - https://github.com/ruvnet/claude-code-flow/docs/12-swarm.md');
-        console.log('  - https://github.com/ruvnet/claude-code-flow/SWARM_TTY_SOLUTION.md');
+        console.log('  - https://github.com/chatman-media/claude-flow-multilang/docs/12-swarm.md');
+        console.log('  - https://github.com/chatman-media/claude-flow-multilang/SWARM_TTY_SOLUTION.md');
       } else if (command === 'sparc') {
         console.log(bold(blue('SPARC Development Mode')));
         console.log();
@@ -2165,7 +2165,7 @@ Now, please proceed with the task: ${task}`;
         );
         console.log();
         console.log(
-          'For more information, see: https://github.com/ruvnet/claude-code-flow/docs/sparc.md',
+          'For more information, see: https://github.com/chatman-media/claude-flow-multilang/docs/sparc.md',
         );
       } else if (command === 'start') {
         console.log(bold(blue('Enhanced Start Command')));

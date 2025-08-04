@@ -371,9 +371,9 @@ cp -r memory memory-backup
 
 ## 💬 Support
 
-- **GitHub Issues**: [Report problems](https://github.com/ruvnet/claude-code-flow/issues)
+- **GitHub Issues**: [Report problems](https://github.com/chatman-media/claude-flow-multilang/issues)
 - **Discord Community**: [Get help](https://discord.gg/claude-flow)
-- **Documentation**: [Full docs](https://github.com/ruvnet/claude-code-flow/docs)
+- **Documentation**: [Full docs](https://github.com/chatman-media/claude-flow-multilang/docs)
 
 ---
 

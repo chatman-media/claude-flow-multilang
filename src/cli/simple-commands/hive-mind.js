@@ -111,7 +111,7 @@ ${chalk.bold('OPTIONS:')}
   --execute              Execute Claude Code spawn commands immediately
 
 ${chalk.bold('For more information:')}
-${chalk.blue('https://github.com/ruvnet/claude-flow/tree/main/docs/hive-mind')}
+${chalk.blue('https://github.com/chatman-media/claude-flow-multilang/tree/main/docs/hive-mind')}
 `);
 }
 

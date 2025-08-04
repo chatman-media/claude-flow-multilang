@@ -310,8 +310,8 @@ claude-flow hive-mind spawn "Implement designed system"
 
 ## Support
 
-- **Documentation**: [GitHub Wiki](https://github.com/ruvnet/claude-code-flow)
-- **Issues**: [GitHub Issues](https://github.com/ruvnet/claude-code-flow/issues)
+- **Documentation**: [GitHub Wiki](https://github.com/chatman-media/claude-flow-multilang)
+- **Issues**: [GitHub Issues](https://github.com/chatman-media/claude-flow-multilang/issues)
 - **Discord**: [Community Chat](https://discord.gg/claudeflow)
 
 ---

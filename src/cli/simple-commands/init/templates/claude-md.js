@@ -465,7 +465,7 @@ This SPARC-enabled project follows a systematic development approach:
 - Regular security reviews for any authentication or data handling code
 - Claude Code slash commands provide quick access to SPARC modes
 
-For more information about SPARC methodology, see: https://github.com/ruvnet/claude-code-flow/docs/sparc.md
+For more information about SPARC methodology, see: https://github.com/chatman-media/claude-flow-multilang/docs/sparc.md
 `;
 }
 
@@ -637,8 +637,8 @@ npx claude-flow sparc run integration "integrate authentication with user manage
 - Monitor system resources during parallel operations for optimal performance
 
 For more information about SPARC methodology and batchtools optimization, see: 
-- SPARC Guide: https://github.com/ruvnet/claude-code-flow/docs/sparc.md
-- Batchtools Documentation: https://github.com/ruvnet/claude-code-flow/docs/batchtools.md
+- SPARC Guide: https://github.com/chatman-media/claude-flow-multilang/docs/sparc.md
+- Batchtools Documentation: https://github.com/chatman-media/claude-flow-multilang/docs/batchtools.md
 
 # important-instruction-reminders
 Do what has been asked; nothing more, nothing less.

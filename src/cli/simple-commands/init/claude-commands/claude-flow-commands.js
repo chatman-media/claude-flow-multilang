@@ -104,9 +104,9 @@ npx -y claude-flow@latest init --sparc
 - Use background mode for tasks > 30 minutes
 
 ## 📚 Resources
-- Documentation: https://github.com/ruvnet/claude-code-flow/docs
-- Examples: https://github.com/ruvnet/claude-code-flow/examples
-- Issues: https://github.com/ruvnet/claude-code-flow/issues
+- Documentation: https://github.com/chatman-media/claude-flow-multilang/docs
+- Examples: https://github.com/chatman-media/claude-flow-multilang/examples
+- Issues: https://github.com/chatman-media/claude-flow-multilang/issues
 `;
 
   await fs.writeFile(`${workingDir}/.claude/commands/claude-flow-help.md`, helpCommand, 'utf8');
@@ -430,7 +430,7 @@ Swarms automatically use distributed memory for collaboration:
 - Resource-aware
 - Adaptive
 
-For detailed documentation, see: https://github.com/ruvnet/claude-code-flow/docs/swarm-system.md
+For detailed documentation, see: https://github.com/chatman-media/claude-flow-multilang/docs/swarm-system.md
 `;
 
   await fs.writeFile(`${workingDir}/.claude/commands/claude-flow-swarm.md`, swarmCommand, 'utf8');

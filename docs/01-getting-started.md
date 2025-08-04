@@ -17,7 +17,7 @@ claude-flow --version
 ### Option 2: Deno Installation
 ```bash
 # Install with Deno
-deno install --allow-all --name claude-flow https://raw.githubusercontent.com/ruvnet/claude-code-flow/main/src/cli/index.ts
+deno install --allow-all --name claude-flow https://raw.githubusercontent.com/chatman-media/claude-flow-multilang/main/src/cli/index.ts
 
 # Verify installation
 claude-flow --help
@@ -26,7 +26,7 @@ claude-flow --help
 ### Option 3: From Source
 ```bash
 # Clone the repository
-git clone https://github.com/ruvnet/claude-code-flow.git
+git clone https://github.com/chatman-media/claude-flow-multilang.git
 cd claude-code-flow
 
 # Install dependencies and build
@@ -227,7 +227,7 @@ claude-flow config init --force
 
 - Use `claude-flow help` for command-line help
 - Join our [Discord community](https://discord.gg/claude-flow)
-- Check [GitHub Issues](https://github.com/ruvnet/claude-code-flow/issues)
+- Check [GitHub Issues](https://github.com/chatman-media/claude-flow-multilang/issues)
 - Review the [full documentation](https://claude-flow.dev/docs)
 
 ## Troubleshooting Common Issues

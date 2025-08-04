@@ -278,7 +278,7 @@ Found 149 errors in the source code that prevent building.
 
 Quick fix:
   • Use NPX to run pre-built version: npx claude-flow@2.0.0
-  • Report issue: github.com/ruvnet/claude-code-flow/issues
+  • Report issue: github.com/chatman-media/claude-flow-multilang/issues
 
 # Missing Dependencies
 ❌ Missing Dependencies: Required packages not installed

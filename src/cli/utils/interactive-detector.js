@@ -93,7 +93,7 @@ export function handleNonInteractive(commandName, interactiveFn, nonInteractiveF
         console.error('4. If using Docker, run with: docker run -it');
         console.error('5. If using SSH, ensure pseudo-TTY allocation with: ssh -t');
         console.error(
-          '\nFor more info: https://github.com/ruvnet/claude-code-flow/docs/non-interactive.md\n',
+          '\nFor more info: https://github.com/chatman-media/claude-flow-multilang/docs/non-interactive.md\n',
         );
         process.exit(1);
       }

@@ -335,6 +335,6 @@ npx claude-flow monitor --resources --concurrent --real-time
 - Restart stuck agents with batch operations: \`npx claude-flow agent batch-restart <agent-ids>\`
 - Use concurrent diagnostics: \`npx claude-flow debug --all-systems --parallel\`
 
-For more information about coordination system optimization, see: https://github.com/ruvnet/claude-code-flow/docs/coordination-batchtools.md
+For more information about coordination system optimization, see: https://github.com/chatman-media/claude-flow-multilang/docs/coordination-batchtools.md
 `;
 }

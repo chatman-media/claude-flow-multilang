@@ -75,8 +75,8 @@ USAGE:
   claude-flow init --sparc         # Initialize with SPARC methodology
   claude-flow help hive-mind       # Learn about Hive Mind features
 
-📚 Documentation: https://github.com/ruvnet/claude-flow
-🐝 Hive Mind Guide: https://github.com/ruvnet/claude-flow/tree/main/docs/hive-mind
+📚 Documentation: https://github.com/chatman-media/claude-flow-multilang
+🐝 Hive Mind Guide: https://github.com/chatman-media/claude-flow-multilang/tree/main/docs/hive-mind
 🐝 ruv-swarm: https://github.com/ruvnet/ruv-FANN/tree/main/ruv-swarm
 `;
 

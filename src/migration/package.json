@@ -66,11 +66,11 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/ruvnet/claude-code-flow",
+    "url": "https://github.com/chatman-media/claude-flow-multilang",
     "directory": "src/migration"
   },
   "bugs": {
-    "url": "https://github.com/ruvnet/claude-code-flow/issues"
+    "url": "https://github.com/chatman-media/claude-flow-multilang/issues"
   },
-  "homepage": "https://github.com/ruvnet/claude-code-flow#readme"
+  "homepage": "https://github.com/chatman-media/claude-flow-multilang#readme"
 }

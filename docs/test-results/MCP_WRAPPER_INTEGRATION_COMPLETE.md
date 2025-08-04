@@ -110,6 +110,6 @@ This will test:
 
 ## Support
 
-- Report issues: https://github.com/ruvnet/claude-code-flow/issues
+- Report issues: https://github.com/chatman-media/claude-flow-multilang/issues
 - Legacy mode available as fallback
 - All existing workflows continue to work

@@ -204,11 +204,11 @@ npx -y claude-flow@latest init --sparc --force
 - **Monitoring Intervals**: Set appropriate monitoring frequencies
 
 ## 📚 Resources (Enhanced)
-- Documentation: https://github.com/ruvnet/claude-code-flow/docs
-- Batchtools Guide: https://github.com/ruvnet/claude-code-flow/docs/batchtools.md
-- Performance Optimization: https://github.com/ruvnet/claude-code-flow/docs/performance.md
-- Examples: https://github.com/ruvnet/claude-code-flow/examples
-- Issues: https://github.com/ruvnet/claude-code-flow/issues
+- Documentation: https://github.com/chatman-media/claude-flow-multilang/docs
+- Batchtools Guide: https://github.com/chatman-media/claude-flow-multilang/docs/batchtools.md
+- Performance Optimization: https://github.com/chatman-media/claude-flow-multilang/docs/performance.md
+- Examples: https://github.com/chatman-media/claude-flow-multilang/examples
+- Issues: https://github.com/chatman-media/claude-flow-multilang/issues
 
 ## 🚨 Troubleshooting (Enhanced)
 
@@ -527,7 +527,7 @@ The memory system provides persistent storage for cross-session and cross-agent 
 ./claude-flow memory performance-report --detailed --recommendations
 \`\`\`
 
-For comprehensive memory system documentation and optimization guides, see: https://github.com/ruvnet/claude-code-flow/docs/memory-batchtools.md
+For comprehensive memory system documentation and optimization guides, see: https://github.com/chatman-media/claude-flow-multilang/docs/memory-batchtools.md
 `;
 
   await fs.writeFile(`${workingDir}/.claude/commands/claude-flow-memory.md`, memoryCommand, 'utf8');
@@ -868,7 +868,7 @@ Swarms automatically use distributed memory with parallel processing for collabo
 - **Monitoring**: 350% improvement with concurrent metrics
 - **Memory Operations**: 400% faster with parallel processing
 
-For detailed documentation and optimization guides, see: https://github.com/ruvnet/claude-code-flow/docs/swarm-batchtools.md
+For detailed documentation and optimization guides, see: https://github.com/chatman-media/claude-flow-multilang/docs/swarm-batchtools.md
 `;
 
   await fs.writeFile(`${workingDir}/.claude/commands/claude-flow-swarm.md`, swarmCommand, 'utf8');

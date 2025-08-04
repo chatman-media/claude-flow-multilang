@@ -119,9 +119,9 @@ npm install -g ruv-swarm
 ```
 
 ## 📚 Additional Resources
-- [Full Documentation](https://github.com/ruvnet/claude-code-flow)
+- [Full Documentation](https://github.com/chatman-media/claude-flow-multilang)
 - [ruv-swarm Integration Guide](https://github.com/ruvnet/ruv-FANN/tree/main/ruv-swarm)
-- [Support & Issues](https://github.com/ruvnet/claude-code-flow/issues)
+- [Support & Issues](https://github.com/chatman-media/claude-flow-multilang/issues)
 
 ## 🆘 Getting Help
 - GitHub Issues: Report bugs or request features

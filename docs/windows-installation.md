@@ -185,7 +185,7 @@ Always use in-memory storage:
 
 ## Getting Help
 
-- GitHub Issues: https://github.com/ruvnet/claude-code-flow/issues
+- GitHub Issues: https://github.com/chatman-media/claude-flow-multilang/issues
 - Discord: [Join our community]
 - Documentation: https://claude-flow.dev/docs
 

@@ -242,7 +242,7 @@ HEADLESS MODE:
   - Suitable for containerized deployments
 
 For complete documentation and examples:
-https://github.com/ruvnet/claude-code-flow/docs/swarm.md
+https://github.com/chatman-media/claude-flow-multilang/docs/swarm.md
 `);
 }
 
@@ -1417,7 +1417,7 @@ ADVANCED OPTIONS:
   --fault-tolerance <type>   Fault tolerance strategy
 
 For complete documentation and examples:
-https://github.com/ruvnet/claude-code-flow/docs/swarm.md
+https://github.com/chatman-media/claude-flow-multilang/docs/swarm.md
 `);
   }
 }

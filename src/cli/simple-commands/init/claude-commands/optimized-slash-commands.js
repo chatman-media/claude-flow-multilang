@@ -245,7 +245,7 @@ Chain operations with parallel execution at each stage:
 ./claude-flow batchtools resources --concurrent --verbose
 \`\`\`
 
-For detailed documentation, see: https://github.com/ruvnet/claude-code-flow/docs/batchtools.md
+For detailed documentation, see: https://github.com/chatman-media/claude-flow-multilang/docs/batchtools.md
 `;
 
   await fs.writeFile(`${workingDir}/.claude/commands/batchtools.md`, batchtoolsCommand, 'utf8');
@@ -343,7 +343,7 @@ Real-time performance monitoring and optimization tools for Claude-Flow operatio
 - Implement performance alerts for critical thresholds
 - Regular performance analysis and optimization
 
-For comprehensive performance guides, see: https://github.com/ruvnet/claude-code-flow/docs/performance.md
+For comprehensive performance guides, see: https://github.com/chatman-media/claude-flow-multilang/docs/performance.md
 `;
 
   await fs.writeFile(`${workingDir}/.claude/commands/performance.md`, performanceCommand, 'utf8');

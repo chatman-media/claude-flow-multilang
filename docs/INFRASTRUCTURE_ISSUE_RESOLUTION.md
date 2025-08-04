@@ -324,7 +324,7 @@ All infrastructure issues (#87, #91, #21, #19, #57) have been **comprehensively 
 4. **Report Any Issues**: Use GitHub issue tracker for any remaining problems
 
 ### ✅ Support Resources:
-- **Documentation**: https://github.com/ruvnet/claude-code-flow
+- **Documentation**: https://github.com/chatman-media/claude-flow-multilang
 - **ruv-swarm**: https://github.com/ruvnet/ruv-FANN/tree/main/ruv-swarm
 - **Issue Tracker**: GitHub issues with comprehensive tagging system
 - **Community**: Enhanced support with v2.0.0 enterprise features

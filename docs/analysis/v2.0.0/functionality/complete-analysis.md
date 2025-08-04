@@ -19,7 +19,7 @@ Claude Flow v2.0.0 represents a major evolution in AI agent orchestration, featu
 #### Local Installation
 ```bash
 # Clone and install
-git clone https://github.com/ruvnet/claude-code-flow
+git clone https://github.com/chatman-media/claude-flow-multilang
 cd claude-code-flow
 npm install
 

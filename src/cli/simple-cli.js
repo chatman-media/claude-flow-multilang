@@ -183,7 +183,7 @@ COMMON OPTIONS:
   --parallel                           Enable parallel execution (default for swarms)
   --monitor                            Real-time monitoring and performance tracking
 
-📚 Documentation: https://github.com/ruvnet/claude-code-flow
+📚 Documentation: https://github.com/chatman-media/claude-flow-multilang
 🐝 ruv-swarm: https://github.com/ruvnet/ruv-FANN/tree/main/ruv-swarm
 
 🚀 Enterprise-Grade AI Agent Orchestration - Built with ❤️ by rUv for the Claude community
@@ -3173,7 +3173,7 @@ You can customize this environment by:
 - Creating mode-specific templates in \`templates/\`
 - Adding project-specific configurations in \`configs/\`
 
-For more information, see: https://github.com/ruvnet/claude-code-flow/docs/sparc.md
+For more information, see: https://github.com/chatman-media/claude-flow-multilang/docs/sparc.md
 `;
 }
 
@@ -3421,7 +3421,7 @@ This SPARC-enabled project follows a systematic development approach:
 - Document architectural decisions in memory for future reference
 - Regular security reviews for any authentication or data handling code
 
-For more information about SPARC methodology, see: https://github.com/ruvnet/claude-code-flow/docs/sparc.md
+For more information about SPARC methodology, see: https://github.com/chatman-media/claude-flow-multilang/docs/sparc.md
 `;
 }
 
