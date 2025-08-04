@@ -32,6 +32,8 @@ bin/claude-flow-*
 .env.local
 .env.*.local
 
+# Wiki folder (now included in repo)
+
 # Logs
 logs/
 *.log
@@ -123,3 +125,4 @@ claude-flow
 claude-flow.bat
 claude-flow.ps1
 hive-mind-prompt-*.txt
+.history

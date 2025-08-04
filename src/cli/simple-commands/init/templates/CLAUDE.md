@@ -323,8 +323,8 @@ Task("Production validation", "...", "production-validator")
 - Apply `collective-intelligence-coordinator` for decision-making
 
 For more information about SPARC methodology and batchtools optimization, see: 
-- SPARC Guide: https://github.com/ruvnet/claude-code-flow/docs/sparc.md
-- Batchtools Documentation: https://github.com/ruvnet/claude-code-flow/docs/batchtools.md
+- SPARC Guide: https://github.com/chatman-media/claude-flow-multilang/docs/sparc.md
+- Batchtools Documentation: https://github.com/chatman-media/claude-flow-multilang/docs/batchtools.md
 
 # important-instruction-reminders
 Message 3: Task("Agent 2")
@@ -1176,9 +1176,9 @@ Claude Flow extends the base coordination with:
 
 ## Support
 
-- Documentation: https://github.com/ruvnet/claude-flow
-- Issues: https://github.com/ruvnet/claude-flow/issues
-- Examples: https://github.com/ruvnet/claude-flow/tree/main/examples
+- Documentation: https://github.com/chatman-media/claude-flow-multilang
+- Issues: https://github.com/chatman-media/claude-flow-multilang/issues
+- Examples: https://github.com/chatman-media/claude-flow-multilang/tree/main/examples
 
 ---
 

@@ -71,7 +71,7 @@ claude-flow --version
 
 ```bash
 # Clone the repository
-git clone https://github.com/ruvnet/claude-code-flow.git
+git clone https://github.com/chatman-media/claude-flow-multilang.git
 cd claude-code-flow
 
 # Install dependencies

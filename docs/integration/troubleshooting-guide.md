@@ -813,8 +813,8 @@ npx claude-flow@2.0.0 wasm optimize --enable-simd
 ### Support Channels
 
 1. **Documentation**: Check `/workspaces/claude-code-flow/docs/`
-2. **GitHub Issues**: https://github.com/ruvnet/claude-code-flow/issues
-3. **Community**: https://github.com/ruvnet/claude-code-flow/discussions
+2. **GitHub Issues**: https://github.com/chatman-media/claude-flow-multilang/issues
+3. **Community**: https://github.com/chatman-media/claude-flow-multilang/discussions
 4. **Performance Reports**: Use built-in diagnostic tools
 
 ### Reporting Issues

@@ -206,4 +206,4 @@ Planned improvements include:
 
 ---
 
-For more information, see the [Claude Flow documentation](https://github.com/ruvnet/claude-flow) or run `claude-flow help analysis`.
+For more information, see the [Claude Flow documentation](https://github.com/chatman-media/claude-flow-multilang) or run `claude-flow help analysis`.

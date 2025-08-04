@@ -499,8 +499,8 @@ npx claude-flow@2.0.0 init --sparc
 
 ### 📞 Support Resources
 
-- **GitHub Issues**: https://github.com/ruvnet/claude-code-flow/issues
-- **Documentation**: https://github.com/ruvnet/claude-code-flow#readme
+- **GitHub Issues**: https://github.com/chatman-media/claude-flow-multilang/issues
+- **Documentation**: https://github.com/chatman-media/claude-flow-multilang#readme
 - **ruv-swarm Integration**: https://github.com/ruvnet/ruv-FANN/tree/main/ruv-swarm
 
 ### 🔄 Update Recommendations
@@ -1277,4 +1277,4 @@ Available for all commands:
 
 ---
 
-**📖 For more examples and detailed guides, visit our [documentation](https://github.com/ruvnet/claude-code-flow/docs).**
+**📖 For more examples and detailed guides, visit our [documentation](https://github.com/chatman-media/claude-flow-multilang/docs).**

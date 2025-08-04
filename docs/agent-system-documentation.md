@@ -689,4 +689,4 @@ claude-flow agent monitor --all --metrics all --refresh 5s
 
 The Claude Flow agent system provides a powerful foundation for building complex, multi-agent AI workflows. By following these guidelines and best practices, you can create efficient, scalable, and maintainable agent-based solutions.
 
-For more information and updates, visit the [Claude Flow GitHub repository](https://github.com/ruvnet/claude-code-flow).
+For more information and updates, visit the [Claude Flow GitHub repository](https://github.com/chatman-media/claude-flow-multilang).

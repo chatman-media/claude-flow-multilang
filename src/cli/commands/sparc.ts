@@ -559,5 +559,5 @@ async function showSparcHelp(): Promise<void> {
   console.log('  4. Refactor Phase - Optimize and clean up code');
   console.log('  5. Integration - Verify complete solution');
   console.log();
-  console.log('For more information: https://github.com/ruvnet/claude-code-flow/docs/sparc.md');
+  console.log('For more information: https://github.com/chatman-media/claude-flow-multilang/docs/sparc.md');
 }

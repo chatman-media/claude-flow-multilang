@@ -95,5 +95,5 @@ export function showInitHelp() {
   console.log('  • devops - Deployment and infrastructure');
   console.log('  • And 7+ more specialized modes...');
   console.log();
-  console.log('Learn more: https://github.com/ruvnet/claude-code-flow');
+  console.log('Learn more: https://github.com/chatman-media/claude-flow-multilang');
 }

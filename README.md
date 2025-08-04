@@ -2,12 +2,12 @@
 
 <div align="center">
 
-[![🌟 Star on GitHub](https://img.shields.io/github/stars/ruvnet/claude-flow?style=for-the-badge&logo=github&color=gold)](https://github.com/ruvnet/claude-flow)
+[![🌟 Star on GitHub](https://img.shields.io/github/stars/chatman-media/claude-flow-multilang?style=for-the-badge&logo=github&color=gold)](https://github.com/chatman-media/claude-flow-multilang)
 [![📦 Alpha Release](https://img.shields.io/npm/v/claude-flow/alpha?style=for-the-badge&logo=npm&color=orange&label=v2.0.0-alpha.53)](https://www.npmjs.com/package/claude-flow/v/alpha)
-[![⚡ Claude Code](https://img.shields.io/badge/Claude%20Code-Optimized-green?style=for-the-badge&logo=anthropic)](https://github.com/ruvnet/claude-flow)
+[![⚡ Claude Code](https://img.shields.io/badge/Claude%20Code-Optimized-green?style=for-the-badge&logo=anthropic)](https://github.com/chatman-media/claude-flow-multilang)
 [![🏛️ Agentics Foundation](https://img.shields.io/badge/Agentics-Foundation-crimson?style=for-the-badge&logo=openai)](https://discord.com/invite/dfxmpwkG2D)
-[![🐝 Hive-Mind](https://img.shields.io/badge/Hive--Mind-AI%20Coordination-purple?style=for-the-badge&logo=swarm)](https://github.com/ruvnet/claude-flow)
-[![🧠 Neural](https://img.shields.io/badge/Neural-87%20MCP%20Tools-blue?style=for-the-badge&logo=tensorflow)](https://github.com/ruvnet/claude-flow)
+[![🐝 Hive-Mind](https://img.shields.io/badge/Hive--Mind-AI%20Coordination-purple?style=for-the-badge&logo=swarm)](https://github.com/chatman-media/claude-flow-multilang)
+[![🧠 Neural](https://img.shields.io/badge/Neural-87%20MCP%20Tools-blue?style=for-the-badge&logo=tensorflow)](https://github.com/chatman-media/claude-flow-multilang)
 [![🛡️ MIT License](https://img.shields.io/badge/License-MIT-yellow?style=for-the-badge&logo=opensourceinitiative)](https://opensource.org/licenses/MIT)
 
 </div>
@@ -37,7 +37,7 @@
 
 - **Node.js 18+** (LTS recommended)
 - **npm 9+** or equivalent package manager
-- **Windows users**: See [Windows Installation Guide](https://github.com/ruvnet/claude-code-flow/blob/main/docs/windows-installation.md) for special instructions
+- **Windows users**: See [Windows Installation Guide](https://github.com/chatman-media/claude-flow-multilang/blob/main/docs/windows-installation.md) for special instructions
 
 ⚠️ **IMPORTANT**: Claude Code must be installed first:
 
@@ -50,7 +50,7 @@ npm install -g @anthropic-ai/claude-code
 # claude --dangerously-skip-permissions
 ```
 
-💡 **Windows Note**: If you encounter SQLite errors, Claude Flow will automatically use in-memory storage. For persistent storage options, see our [Windows guide](https://github.com/ruvnet/claude-code-flow/blob/main/docs/windows-installation.md).
+💡 **Windows Note**: If you encounter SQLite errors, Claude Flow will automatically use in-memory storage. For persistent storage options, see our [Windows guide](https://github.com/chatman-media/claude-flow-multilang/blob/main/docs/windows-installation.md).
 
 ### 🎯 **Instant Alpha Testing**
 
@@ -308,7 +308,7 @@ npx claude-flow@alpha memory export backup.json --namespace default
 npx claude-flow@alpha memory import project-memory.json
 ```
 
-> 🪟 **Windows Users**: SQLite will automatically fallback to in-memory storage if native modules fail. All features work normally, but data won't persist between sessions. See [Windows guide](https://github.com/ruvnet/claude-code-flow/blob/main/docs/windows-installation.md) for persistent storage options.
+> 🪟 **Windows Users**: SQLite will automatically fallback to in-memory storage if native modules fail. All features work normally, but data won't persist between sessions. See [Windows guide](https://github.com/chatman-media/claude-flow-multilang/blob/main/docs/windows-installation.md) for persistent storage options.
 
 ### **🔄 Workflow Orchestration**
 ```bash
@@ -609,9 +609,9 @@ npx claude-flow@alpha help <command>  # Detailed command help
 ### **🐛 Bug Reports & Feedback**
 Found issues with the alpha? We want to hear from you!
 
-- **🐛 Report Bugs**: [GitHub Issues](https://github.com/ruvnet/claude-flow/issues)
+- **🐛 Report Bugs**: [GitHub Issues](https://github.com/chatman-media/claude-flow-multilang/issues)
 - **💡 Feature Requests**: Use the "Alpha Feedback" label
-- **🛠️ Development**: Check the [`claude-flow-v2.0.0`](https://github.com/ruvnet/claude-flow/tree/claude-flow-v2.0.0) branch
+- **🛠️ Development**: Check the [`claude-flow-v2.0.0`](https://github.com/chatman-media/claude-flow-multilang/tree/claude-flow-v2.0.0) branch
 - **📋 Alpha Testing**: Join our alpha testing program
 
 ### **🔬 Testing the Alpha**
@@ -677,7 +677,7 @@ npx claude-flow@alpha workflow --help
 ### **🛠️ Alpha Development Setup**
 ```bash
 # Clone the alpha development branch
-git clone https://github.com/ruvnet/claude-flow.git
+git clone https://github.com/chatman-media/claude-flow-multilang.git
 cd claude-flow
 git checkout claude-flow-v2.0.0
 
@@ -877,7 +877,7 @@ npx claude-flow@alpha init --force
 
 **Join the alpha testing revolution!**
 
-[![GitHub](https://img.shields.io/badge/GitHub-Alpha%20Branch-blue?style=for-the-badge&logo=github)](https://github.com/ruvnet/claude-flow/tree/claude-flow-v2.0.0)
+[![GitHub](https://img.shields.io/badge/GitHub-Alpha%20Branch-blue?style=for-the-badge&logo=github)](https://github.com/chatman-media/claude-flow-multilang/tree/claude-flow-v2.0.0)
 [![NPM Alpha](https://img.shields.io/badge/NPM-Alpha%20Release-orange?style=for-the-badge&logo=npm)](https://www.npmjs.com/package/claude-flow/v/alpha)
 [![Discord](https://img.shields.io/badge/Discord-Agentics%20Community-purple?style=for-the-badge&logo=discord)](https://discord.com/invite/dfxmpwkG2D)
 
@@ -885,11 +885,11 @@ npx claude-flow@alpha init --force
 
 ## Star History
 
-<a href="https://www.star-history.com/#ruvnet/claude-flow&Date">
+<a href="https://www.star-history.com/#chatman-media/claude-flow-multilang&Date">
  <picture>
-   <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/svg?repos=ruvnet/claude-flow&type=Date&theme=dark" />
-   <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/svg?repos=ruvnet/claude-flow&type=Date" />
-   <img alt="Star History Chart" src="https://api.star-history.com/svg?repos=ruvnet/claude-flow&type=Date" />
+   <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/svg?repos=chatman-media/claude-flow-multilang&type=Date&theme=dark" />
+   <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/svg?repos=chatman-media/claude-flow-multilang&type=Date" />
+   <img alt="Star History Chart" src="https://api.star-history.com/svg?repos=chatman-media/claude-flow-multilang&type=Date" />
  </picture>
 </a>
 

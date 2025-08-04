@@ -443,7 +443,7 @@ Congratulations! You've successfully:
 
   <div class="community-links">
     <h4>Join the Community</h4>
-    <a href="https://github.com/ruvnet/claude-code-flow" class="community-button">
+    <a href="https://github.com/chatman-media/claude-flow-multilang" class="community-button">
       📦 GitHub Repository
     </a>
     <a href="https://discord.gg/claude-flow" class="community-button">

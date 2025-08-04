@@ -191,7 +191,7 @@ export class MCPToolWrapper {
       if (process.platform === 'win32') {
         console.info(`
 Windows users: For persistent storage, please see installation guide:
-https://github.com/ruvnet/claude-code-flow/docs/windows-installation.md
+https://github.com/chatman-media/claude-flow-multilang/docs/windows-installation.md
 `);
       }
     }

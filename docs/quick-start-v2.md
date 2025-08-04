@@ -48,7 +48,7 @@ npx claude-flow@2.0.0 --version
 
 ```bash
 # Clone and build from source
-git clone https://github.com/ruvnet/claude-code-flow.git
+git clone https://github.com/chatman-media/claude-flow-multilang.git
 cd claude-code-flow
 npm install
 npm run build
@@ -453,7 +453,7 @@ claude-flow memory debug --access-patterns --optimization-hints
 
 ### Community and Support
 
-1. **GitHub Discussions**: [Advanced v2.0.0 topics](https://github.com/ruvnet/claude-code-flow/discussions)
+1. **GitHub Discussions**: [Advanced v2.0.0 topics](https://github.com/chatman-media/claude-flow-multilang/discussions)
 2. **Documentation**: [Complete v2.0.0 guide](./README.md)
 3. **Neural Network Guide**: [Training and optimization](./neural-networks.md)
 4. **Hive Mind Manual**: [Collective intelligence setup](./hive-mind/README.md)

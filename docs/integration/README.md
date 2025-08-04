@@ -256,8 +256,8 @@ npx claude-flow@2.0.0 start --ui --port 3000
 - [MCP Protocol](https://spec.modelcontextprotocol.io/) - Model Context Protocol
 
 ### Community
-- [GitHub Issues](https://github.com/ruvnet/claude-code-flow/issues) - Bug reports and feature requests
-- [GitHub Discussions](https://github.com/ruvnet/claude-code-flow/discussions) - Community support
+- [GitHub Issues](https://github.com/chatman-media/claude-flow-multilang/issues) - Bug reports and feature requests
+- [GitHub Discussions](https://github.com/chatman-media/claude-flow-multilang/discussions) - Community support
 - [Performance Metrics](../reports/COMPREHENSIVE_BENCHMARK_ANALYSIS_REPORT.md) - Latest benchmarks
 
 ---

@@ -132,7 +132,7 @@ function showFallbackHelp() {
   console.log('Or use directly:');
   console.log('  node src/cli/simple-cli.js <command>');
   console.log('');
-  console.log('Documentation: https://github.com/ruvnet/claude-code-flow');
+  console.log('Documentation: https://github.com/chatman-media/claude-flow-multilang');
 }
 
 main();

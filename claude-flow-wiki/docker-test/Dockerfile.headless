@@ -1,0 +1,31 @@
+# Dockerfile for testing headless Claude Flow deployment
+FROM node:18-slim
+
+# Install required dependencies
+RUN apt-get update && apt-get install -y \
+    git \
+    curl \
+    && rm -rf /var/lib/apt/lists/*
+
+# Set working directory
+WORKDIR /app
+
+# Copy package files
+COPY package*.json ./
+
+# Install dependencies
+RUN npm ci --production
+
+# Copy application files
+COPY . .
+
+# Set environment variables for headless mode
+ENV CI=true
+ENV NODE_ENV=production
+
+# Health check endpoint
+HEALTHCHECK --interval=30s --timeout=3s --start-period=5s --retries=3 \
+  CMD node -e "require('./src/cli/simple-cli.js').swarmCommand([], {'health-check': true})" || exit 1
+
+# Default command - run a simple swarm task in headless mode
+CMD ["node", "src/cli/simple-cli.js", "swarm", "analyze system health", "--headless", "--output-format", "json"]

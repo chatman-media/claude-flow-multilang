@@ -285,8 +285,8 @@ Before deployment, verify:
 
 For issues or questions:
 
-- **GitHub Issues**: https://github.com/ruvnet/claude-code-flow/issues
-- **Documentation**: https://github.com/ruvnet/claude-code-flow/docs
+- **GitHub Issues**: https://github.com/chatman-media/claude-flow-multilang/issues
+- **Documentation**: https://github.com/chatman-media/claude-flow-multilang/docs
 - **Discord**: Community support channel
 
 ---

@@ -1551,7 +1551,7 @@ ADVANCED OPTIONS:
   --fault-tolerance <strategy>   Fault tolerance approach
   --quality-threshold <n>        Quality threshold (0-1)
 
-For more information, see: https://github.com/ruvnet/claude-flow
+For more information, see: https://github.com/chatman-media/claude-flow-multilang
 `);
 }
 

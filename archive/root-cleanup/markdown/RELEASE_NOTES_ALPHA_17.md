@@ -39,4 +39,4 @@ This fix was implemented by **Queen Seraphina** and the Claude Flow Hive Mind Co
 
 ---
 
-**Full Changelog**: https://github.com/ruvnet/claude-flow/compare/v2.0.0-alpha.16...v2.0.0-alpha.17
+**Full Changelog**: https://github.com/chatman-media/claude-flow-multilang/compare/v2.0.0-alpha.16...v2.0.0-alpha.17

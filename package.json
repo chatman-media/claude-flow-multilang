@@ -1,10 +1,11 @@
 {
-  "name": "claude-flow",
-  "version": "2.0.0-alpha.84",
-  "description": "Enterprise-grade AI agent orchestration with ruv-swarm integration (Alpha Release)",
+  "name": "claude-flow-multilang",
+  "version": "3.0.0-multilang.1",
+  "description": "Revolutionary multilingual AI orchestration framework with cultural awareness and DDD architecture",
   "main": "cli.mjs",
   "bin": {
-    "claude-flow": "bin/claude-flow.js"
+    "claude-flow": "bin/claude-flow.js",
+    "ddd-sparc": "bin/ddd-sparc.js"
   },
   "scripts": {
     "preinstall": "node -e \"if(process.platform === 'win32' && process.env.npm_config_user_agent && process.env.npm_config_user_agent.includes('npm')) { console.warn('⚠️  Warning: On Windows, it is recommended to use pnpm to install this package to avoid potential native dependency build issues.'); console.warn('💡 Try: pnpm install or pnpx claude-flow@alpha'); }\"",
@@ -55,7 +56,11 @@
     "prepack": "echo 'Alpha release - skipping build for now'",
     "postpack": "echo 'Package created successfully'",
     "prepare-publish": "node scripts/prepare-publish.js",
-    "start": "node server.js"
+    "start": "node server.js",
+    "example:ddd": "node examples/ddd-example.js",
+    "example:ddd:ts": "node --loader ts-node/esm examples/ddd-development-example.ts",
+    "example:commands": "node --loader ts-node/esm examples/ddd-commands-example.ts",
+    "example:multilang": "node --loader ts-node/esm examples/multilang-workflow-example.ts"
   },
   "keywords": [
     "claude",
@@ -66,27 +71,32 @@
     "workflow",
     "automation",
     "swarm",
-    "ruv-swarm",
-    "github",
-    "docker",
-    "enterprise",
-    "coordination",
+    "multilingual",
+    "polyglot",
+    "i18n",
+    "l10n",
+    "ddd",
+    "domain-driven-design",
+    "cultural-context",
+    "translation",
+    "localization",
+    "international",
     "multi-agent",
     "neural-networks",
     "cli",
     "tools",
-    "alpha"
+    "enterprise"
   ],
   "author": "rUv",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ruvnet/claude-code-flow.git"
+    "url": "git+https://github.com/chatman-media/claude-flow-multilang.git"
   },
   "bugs": {
-    "url": "https://github.com/ruvnet/claude-code-flow/issues"
+    "url": "https://github.com/chatman-media/claude-flow-multilang/issues"
   },
-  "homepage": "https://github.com/ruvnet/claude-code-flow#readme",
+  "homepage": "https://github.com/chatman-media/claude-flow-multilang#readme",
   "engines": {
     "node": ">=20.0.0",
     "npm": ">=9.0.0"

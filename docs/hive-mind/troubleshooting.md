@@ -583,8 +583,8 @@ npx claude-flow@2.0.0 hive-mind diagnostic run
 
 ### 3. Support Channels
 
-- GitHub Issues: https://github.com/ruvnet/claude-flow/issues
-- Documentation: https://github.com/ruvnet/claude-flow/docs
+- GitHub Issues: https://github.com/chatman-media/claude-flow-multilang/issues
+- Documentation: https://github.com/chatman-media/claude-flow-multilang/docs
 - Discord: https://discord.gg/claude-flow
 
 ### 4. Report Template

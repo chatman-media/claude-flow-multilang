@@ -659,7 +659,7 @@ npm install -g wasm-pack
 npm install -g wabt
 
 # Clone and setup
-git clone https://github.com/ruvnet/claude-code-flow.git
+git clone https://github.com/chatman-media/claude-flow-multilang.git
 cd claude-code-flow
 npm install
 

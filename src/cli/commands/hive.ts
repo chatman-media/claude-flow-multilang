@@ -537,6 +537,6 @@ FEATURES:
   • Distributed memory sharing
   • SPARC methodology support
 
-For more info: https://github.com/ruvnet/claude-code-flow/docs/hive.md
+For more info: https://github.com/chatman-media/claude-flow-multilang/docs/hive.md
 `);
 }

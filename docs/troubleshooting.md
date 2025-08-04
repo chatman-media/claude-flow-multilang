@@ -186,7 +186,7 @@ npm config set proxy http://proxy.company.com:8080
 npm config set https-proxy http://proxy.company.com:8080
 
 # Alternative: Download and run locally
-git clone https://github.com/ruvnet/claude-code-flow.git
+git clone https://github.com/chatman-media/claude-flow-multilang.git
 cd claude-code-flow
 npm install
 # Note: Local build currently has issues, use NPX instead
@@ -700,7 +700,7 @@ cat .claude/settings.json >> debug-config.txt 2>&1
 
 ### Support Channels
 
-1. **GitHub Issues**: https://github.com/ruvnet/claude-code-flow/issues
+1. **GitHub Issues**: https://github.com/chatman-media/claude-flow-multilang/issues
    - Include debug information
    - Specify NPX vs local build
    - Include error messages and steps to reproduce

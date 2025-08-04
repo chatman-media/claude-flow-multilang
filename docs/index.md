@@ -238,8 +238,8 @@ Powerful terminal management with:
 ## 🤝 Community and Support
 
 ### Getting Help
-- **[GitHub Issues](https://github.com/ruvnet/claude-code-flow/issues)** - Bug reports and feature requests
-- **[GitHub Discussions](https://github.com/ruvnet/claude-code-flow/discussions)** - Community Q&A
+- **[GitHub Issues](https://github.com/chatman-media/claude-flow-multilang/issues)** - Bug reports and feature requests
+- **[GitHub Discussions](https://github.com/chatman-media/claude-flow-multilang/discussions)** - Community Q&A
 - **[Discord](https://discord.gg/claude-flow)** - Real-time chat support
 - **[Documentation](https://claude-flow.dev/docs)** - Comprehensive guides
 

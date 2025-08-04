@@ -12,7 +12,7 @@ Successfully completed comprehensive analysis of Claude Flow v2.0.0 functionalit
 - **Key Finding**: NPX execution fully functional (80% benchmark), local build issues (149+ TS errors)
 
 ### 2. ✅ GitHub Issue Creation
-- **Issue**: [#108](https://github.com/ruvnet/claude-code-flow/issues/108)
+- **Issue**: [#108](https://github.com/chatman-media/claude-flow-multilang/issues/108)
 - **Title**: "Claude Flow v2.0.0 - Comprehensive Functionality Review & Enhancement Proposals"
 - **Status**: Active with 5 agent comments providing specialized analysis
 
