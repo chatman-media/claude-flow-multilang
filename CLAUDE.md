@@ -61,15 +61,15 @@ This project uses the SPARC (Specification, Pseudocode, Architecture, Refinement
 ## SPARC Development Commands
 
 ### Core SPARC Commands
-- `npx claude-flow sparc modes`: List all available SPARC development modes
-- `npx claude-flow sparc run <mode> "<task>"`: Execute specific SPARC mode for a task
-- `npx claude-flow sparc tdd "<feature>"`: Run complete TDD workflow using SPARC methodology
-- `npx claude-flow sparc info <mode>`: Get detailed information about a specific mode
+- `npx claude-flow-multilang sparc modes`: List all available SPARC development modes
+- `npx claude-flow-multilang sparc run <mode> "<task>"`: Execute specific SPARC mode for a task
+- `npx claude-flow-multilang sparc tdd "<feature>"`: Run complete TDD workflow using SPARC methodology
+- `npx claude-flow-multilang sparc info <mode>`: Get detailed information about a specific mode
 
 ### Batchtools Commands (Optimized)
-- `npx claude-flow sparc batch <modes> "<task>"`: Execute multiple SPARC modes in parallel
-- `npx claude-flow sparc pipeline "<task>"`: Execute full SPARC pipeline with parallel processing
-- `npx claude-flow sparc concurrent <mode> "<tasks-file>"`: Process multiple tasks concurrently
+- `npx claude-flow-multilang sparc batch <modes> "<task>"`: Execute multiple SPARC modes in parallel
+- `npx claude-flow-multilang sparc pipeline "<task>"`: Execute full SPARC pipeline with parallel processing
+- `npx claude-flow-multilang sparc concurrent <mode> "<tasks-file>"`: Process multiple tasks concurrently
 
 ### Standard Build Commands
 - `npm run build`: Build the project
@@ -82,35 +82,35 @@ This project uses the SPARC (Specification, Pseudocode, Architecture, Refinement
 ### 1. Specification Phase (Parallel Analysis)
 ```bash
 # Create detailed specifications with concurrent requirements analysis
-npx claude-flow sparc run spec-pseudocode "Define user authentication requirements" --parallel
+npx claude-flow-multilang sparc run spec-pseudocode "Define user authentication requirements" --parallel
 ```
 **Batchtools Optimization**: Simultaneously analyze multiple requirement sources, validate constraints in parallel, and generate comprehensive specifications.
 
 ### 2. Pseudocode Phase (Concurrent Logic Design)
 ```bash
 # Develop algorithmic logic with parallel pattern analysis
-npx claude-flow sparc run spec-pseudocode "Create authentication flow pseudocode" --batch-optimize
+npx claude-flow-multilang sparc run spec-pseudocode "Create authentication flow pseudocode" --batch-optimize
 ```
 **Batchtools Optimization**: Process multiple algorithm patterns concurrently, validate logic flows in parallel, and optimize data structures simultaneously.
 
 ### 3. Architecture Phase (Parallel Component Design)
 ```bash
 # Design system architecture with concurrent component analysis
-npx claude-flow sparc run architect "Design authentication service architecture" --parallel
+npx claude-flow-multilang sparc run architect "Design authentication service architecture" --parallel
 ```
 **Batchtools Optimization**: Generate multiple architectural alternatives simultaneously, validate integration points in parallel, and create comprehensive documentation concurrently.
 
 ### 4. Refinement Phase (Parallel TDD Implementation)
 ```bash
 # Execute Test-Driven Development with parallel test generation
-npx claude-flow sparc tdd "implement user authentication system" --batch-tdd
+npx claude-flow-multilang sparc tdd "implement user authentication system" --batch-tdd
 ```
 **Batchtools Optimization**: Generate multiple test scenarios simultaneously, implement and validate code in parallel, and optimize performance concurrently.
 
 ### 5. Completion Phase (Concurrent Integration)
 ```bash
 # Integration with parallel validation and documentation
-npx claude-flow sparc run integration "integrate authentication with user management" --parallel
+npx claude-flow-multilang sparc run integration "integrate authentication with user management" --parallel
 ```
 **Batchtools Optimization**: Run integration tests in parallel, generate documentation concurrently, and validate requirements simultaneously.
 
@@ -522,7 +522,7 @@ Message 6: Write "package.json"
 
 ```bash
 # Add Claude Flow MCP server to Claude Code using stdio
-claude mcp add claude-flow npx claude-flow@alpha mcp start
+claude mcp add claude-flow npx claude-flow-multilang@latest mcp start
 ```
 
 ### 2. Use MCP Tools for Coordination in Claude Code
@@ -614,9 +614,9 @@ Once configured, Claude Flow MCP tools enhance Claude Code's coordination:
 
 1. The swarm sets up a coordination framework
 2. Each agent MUST use Claude Flow hooks for coordination:
-   - `npx claude-flow@alpha hooks pre-task` before starting
-   - `npx claude-flow@alpha hooks post-edit` after each file operation
-   - `npx claude-flow@alpha hooks notify` to share decisions
+   - `npx claude-flow-multilang@latest hooks pre-task` before starting
+   - `npx claude-flow-multilang@latest hooks post-edit` after each file operation
+   - `npx claude-flow-multilang@latest hooks notify` to share decisions
 3. Claude Code uses its native Read, WebSearch, and Task tools
 4. The swarm coordinates through shared memory and hooks
 5. Results are synthesized by Claude Code with full coordination history
@@ -796,7 +796,7 @@ See `.claude/commands/` for detailed documentation on all features.
 
 **CRITICAL: Dynamic Agent Count Rules**
 
-1. **Check CLI Arguments First**: If user runs `npx claude-flow@alpha --agents 5`, use 5 agents
+1. **Check CLI Arguments First**: If user runs `npx claude-flow-multilang@latest --agents 5`, use 5 agents
 2. **Auto-Decide if No Args**: Without CLI args, analyze task complexity:
    - Simple tasks (1-3 components): 3-4 agents
    - Medium tasks (4-6 components): 5-7 agents
@@ -810,7 +810,7 @@ See `.claude/commands/` for detailed documentation on all features.
 **Example Auto-Decision Logic:**
 
 ```javascript
-// If CLI args provided: npx claude-flow@alpha --agents 6
+// If CLI args provided: npx claude-flow-multilang@latest --agents 6
 maxAgents = CLI_ARGS.agents || determineAgentCount(task);
 
 function determineAgentCount(task) {
@@ -832,29 +832,29 @@ When you spawn an agent using the Task tool, that agent MUST:
 
 ```bash
 # Check previous work and load context
-npx claude-flow@alpha hooks pre-task --description "[agent task]" --auto-spawn-agents false
-npx claude-flow@alpha hooks session-restore --session-id "swarm-[id]" --load-memory true
+npx claude-flow-multilang@latest hooks pre-task --description "[agent task]" --auto-spawn-agents false
+npx claude-flow-multilang@latest hooks session-restore --session-id "swarm-[id]" --load-memory true
 ```
 
 **2️⃣ DURING Work (After EVERY Major Step):**
 
 ```bash
 # Store progress in memory after each file operation
-npx claude-flow@alpha hooks post-edit --file "[filepath]" --memory-key "swarm/[agent]/[step]"
+npx claude-flow-multilang@latest hooks post-edit --file "[filepath]" --memory-key "swarm/[agent]/[step]"
 
 # Store decisions and findings
-npx claude-flow@alpha hooks notify --message "[what was done]" --telemetry true
+npx claude-flow-multilang@latest hooks notify --message "[what was done]" --telemetry true
 
 # Check coordination with other agents
-npx claude-flow@alpha hooks pre-search --query "[what to check]" --cache-results true
+npx claude-flow-multilang@latest hooks pre-search --query "[what to check]" --cache-results true
 ```
 
 **3️⃣ AFTER Completing Work:**
 
 ```bash
 # Save all results and learnings
-npx claude-flow@alpha hooks post-task --task-id "[task]" --analyze-performance true
-npx claude-flow@alpha hooks session-end --export-metrics true --generate-summary true
+npx claude-flow-multilang@latest hooks post-task --task-id "[task]" --analyze-performance true
+npx claude-flow-multilang@latest hooks session-end --export-metrics true --generate-summary true
 ```
 
 ### 🎯 AGENT PROMPT TEMPLATE
@@ -865,10 +865,10 @@ When spawning agents, ALWAYS include these coordination instructions:
 You are the [Agent Type] agent in a coordinated swarm.
 
 MANDATORY COORDINATION:
-1. START: Run `npx claude-flow@alpha hooks pre-task --description "[your task]"`
-2. DURING: After EVERY file operation, run `npx claude-flow@alpha hooks post-edit --file "[file]" --memory-key "agent/[step]"`
-3. MEMORY: Store ALL decisions using `npx claude-flow@alpha hooks notify --message "[decision]"`
-4. END: Run `npx claude-flow@alpha hooks post-task --task-id "[task]" --analyze-performance true`
+1. START: Run `npx claude-flow-multilang@latest hooks pre-task --description "[your task]"`
+2. DURING: After EVERY file operation, run `npx claude-flow-multilang@latest hooks post-edit --file "[file]" --memory-key "agent/[step]"`
+3. MEMORY: Store ALL decisions using `npx claude-flow-multilang@latest hooks notify --message "[decision]"`
+4. END: Run `npx claude-flow-multilang@latest hooks post-task --task-id "[task]" --analyze-performance true`
 
 Your specific task: [detailed task description]
 
