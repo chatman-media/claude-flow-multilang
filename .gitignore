@@ -32,8 +32,7 @@ bin/claude-flow-*
 .env.local
 .env.*.local
 
-# Wiki folder (local only)
-claude-flow-wiki/
+# Wiki folder (now included in repo)
 
 # Logs
 logs/

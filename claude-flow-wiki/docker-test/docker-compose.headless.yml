@@ -1,0 +1,48 @@
+version: '3.8'
+
+services:
+  claude-flow-headless:
+    build:
+      context: ../..
+      dockerfile: claude-flow-wiki/docker-test/Dockerfile.headless
+    environment:
+      - CI=true
+      - NODE_ENV=production
+      - CLAUDE_FLOW_HEADLESS=true
+    volumes:
+      - ../../:/app:ro
+    command: >
+      sh -c "
+        echo 'Testing Claude Flow in headless mode...' &&
+        node src/cli/simple-cli.js swarm 'test headless deployment' --headless --json-logs --output-format json
+      "
+    
+  # Health check service
+  claude-flow-health:
+    build:
+      context: ../..
+      dockerfile: claude-flow-wiki/docker-test/Dockerfile.headless
+    environment:
+      - CI=true
+    command: node src/cli/simple-cli.js swarm --health-check
+    
+  # CI/CD simulation
+  claude-flow-ci:
+    build:
+      context: ../..
+      dockerfile: claude-flow-wiki/docker-test/Dockerfile.headless
+    environment:
+      - GITHUB_ACTIONS=true
+      - CI=true
+    volumes:
+      - ./output:/output
+    command: >
+      sh -c "
+        echo 'Running CI/CD simulation...' &&
+        node src/cli/simple-cli.js swarm 'build and test API' \
+          --headless \
+          --output-format json \
+          --output-file /output/ci-results.json \
+          --strategy testing \
+          --max-agents 3
+      "
