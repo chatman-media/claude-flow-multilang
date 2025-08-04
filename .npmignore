@@ -71,7 +71,10 @@ reports/
 !.claude/config.json
 
 # Binary builds (we don't need prebuilt binaries for npm)
-bin/claude-flow-*
+bin/claude-flow-linux
+bin/claude-flow-macos
+bin/claude-flow-win
+bin/claude-flow-node-pkg
 bin/*.exe
 
 # Example and demo files

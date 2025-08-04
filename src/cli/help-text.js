@@ -5,30 +5,37 @@
 
 import { HelpFormatter } from './help-formatter.js';
 
-export const VERSION = '2.0.0-alpha.83';
+export const VERSION = '2.0.0-alpha.84';
 
 export const MAIN_HELP = `
 🌊 Claude-Flow v${VERSION} - Enterprise-Grade AI Agent Orchestration Platform
 
 🎯 ENTERPRISE FEATURES: Complete ruv-swarm integration with 90+ MCP tools, neural networking, and production-ready infrastructure
 🐝 NEW: Claude Code 1.0.51+ full compatibility with enhanced hooks and batch processing
-⚡ ALPHA 83: Enhanced GitHub hooks with npx commands, improved checkpoint reliability, seamless CI/CD integration
+⚡ ALPHA 84: Enhanced swarm --claude flag for direct Claude Code CLI integration
 
 USAGE:
+  npx claude-flow@alpha <command> [options]    # Run latest alpha version
+  npx claude-flow@alpha <command> --help       # Get detailed help for any command
+  npx claude-flow@alpha --help                 # Show this help
+  
+  # After local install:
   claude-flow <command> [options]
   claude-flow <command> --help    # Get detailed help for any command
 
 🚀 QUICK START:
   # First time setup (creates CLAUDE.md & .claude/commands)
-  npx claude-flow@alpha init --sparc
+  npx claude-flow@alpha init
   
   # 🐝 HIVE MIND QUICK START (NEW!):
   claude-flow hive-mind wizard          # Interactive setup wizard
   claude-flow hive-mind spawn "objective"  # Create intelligent swarm
+  claude-flow hive-mind spawn "Build API" --claude  # Open Claude Code CLI
   
   # After setup, use without npx:
   claude-flow start --ui --swarm         # Start with swarm intelligence UI
   claude-flow swarm "build REST API"     # Deploy multi-agent workflow
+  claude-flow swarm "create service" --claude  # Open Claude Code CLI with swarm
 
 🐝 HIVE MIND COMMANDS (NEW!):
   hive-mind wizard         🎯 Interactive setup wizard (RECOMMENDED)
@@ -65,19 +72,21 @@ USAGE:
   batch <action>           Batch operations
 
 🔍 GET HELP:
-  claude-flow --help                Show this help
-  claude-flow help                  Show this help
-  claude-flow help <command>        Detailed command help
-  claude-flow <command> --help      Detailed command help
+  npx claude-flow@alpha --help                Show this help
+  npx claude-flow@alpha <command> --help      Detailed command help
 
 🎯 RECOMMENDED FOR NEW USERS:
-  claude-flow hive-mind wizard     # Start here! Interactive guided setup
-  claude-flow init --sparc         # Initialize with SPARC methodology
-  claude-flow help hive-mind       # Learn about Hive Mind features
+  npx claude-flow@alpha hive-mind wizard     # Start here! Interactive guided setup
+  npx claude-flow@alpha init                 # Initialize Claude Flow
+  npx claude-flow@alpha help hive-mind       # Learn about Hive Mind features
+  npx claude-flow@alpha swarm "Build API" --claude  # Quick start with Claude Code CLI
 
 📚 Documentation: https://github.com/chatman-media/claude-flow-multilang
 🐝 Hive Mind Guide: https://github.com/chatman-media/claude-flow-multilang/tree/main/docs/hive-mind
 🐝 ruv-swarm: https://github.com/ruvnet/ruv-FANN/tree/main/ruv-swarm
+💬 Discord Community: https://discord.agentics.org
+
+💖 Created by rUv with love: https://github.com/ruvnet
 `;
 
 export const COMMAND_HELP = {
@@ -101,6 +110,8 @@ OPTIONS:
   --monitor            Real-time swarm monitoring
   --ui                 Interactive user interface
   --background         Run in background with progress tracking
+  --claude             Open Claude Code CLI
+  --executor           Use built-in executor instead of Claude Code
   --analysis           Enable analysis/read-only mode (no code changes)
   --read-only          Enable read-only mode (alias for --analysis)
 
@@ -109,6 +120,8 @@ EXAMPLES:
   claude-flow swarm "Research cloud architecture patterns" --strategy research
   claude-flow swarm "Optimize database queries" --max-agents 3 --parallel
   claude-flow swarm "Develop feature X" --strategy development --monitor --ui
+  claude-flow swarm "Build API" --claude  # Open Claude Code CLI
+  claude-flow swarm "Create service" --executor  # Use built-in executor
   claude-flow swarm "Analyze codebase for security issues" --analysis
   claude-flow swarm "Review architecture patterns" --read-only --strategy research
 
@@ -904,7 +917,7 @@ export function getMainHelp(plain = false) {
       },
     ],
     examples: [
-      'npx claude-flow@alpha init --sparc',
+      'npx claude-flow@alpha init',
       'claude-flow hive-mind wizard',
       'claude-flow swarm "Build REST API"',
       'claude-flow agent spawn researcher --name "Research Bot"',

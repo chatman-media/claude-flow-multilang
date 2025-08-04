@@ -5,6 +5,26 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [2.0.0-alpha.84] - 2025-02-03
+
+### 🔧 Bug Fixes
+- **Fixed Hive Mind Wizard Memory Retrieval**: 
+  - Fixed memory listing to read from correct database (`hive.db` instead of `memory.db`)
+  - Updated collective memory search to query the `collective_memory` table
+  - Memory wizard now correctly displays all 264 stored memories
+  - Search functionality now properly queries collective memory store
+
+### 📦 Package Optimization
+- **Reduced NPM Package Size by 31%**:
+  - Excluded unnecessary `bin/claude-flow-node-pkg` binary (45MB) from npm package
+  - Package size reduced from 58MB to 40MB
+  - Binary is only needed for standalone distribution, not for npm/npx users
+  - Updated package.json files field to exclude the precompiled binary
+
+### 🛠️ Technical Improvements
+- **Database Consistency**: Aligned memory retrieval across hive mind commands
+- **Memory Search**: Direct SQLite queries for better performance and accuracy
+
 ## [2.0.0-alpha.83] - 2025-02-01
 
 ### 🔧 Bug Fixes

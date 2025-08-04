@@ -156,14 +156,17 @@ EXAMPLES:
   claude-flow swarm "Develop user registration feature" --mode distributed
   claude-flow swarm "Optimize React app performance" --strategy optimization
   claude-flow swarm "Create microservice" --executor  # Use built-in executor
+  claude-flow swarm "Build API" --claude  # Open Claude Code CLI
   claude-flow swarm "Build API endpoints" --output-format json  # Get JSON output
   claude-flow swarm "Research AI trends" --output-format json --output-file results.json
 
 DEFAULT BEHAVIOR:
-  Swarm now opens Claude Code by default with comprehensive MCP tool instructions
+  Swarm attempts to open Claude Code CLI with comprehensive MCP tool instructions
   including memory coordination, agent management, and task orchestration.
   
-  Use --executor flag to run with the built-in executor instead of Claude Code
+  If Claude CLI is not available:
+  • Use --claude flag to open Claude Code CLI
+  • Use --executor flag to run with the built-in executor
 
 STRATEGIES:
   auto           Automatically determine best approach (default)
@@ -210,6 +213,7 @@ OPTIONS:
   --verbose                  Enable detailed logging
   --dry-run                  Show configuration without executing
   --executor                 Use built-in executor instead of Claude Code
+  --claude                   Open Claude Code CLI
   --output-format <format>   Output format: json, text (default: text)
   --output-file <path>       Save output to file instead of stdout
   --no-interactive           Run in non-interactive mode (auto-enabled with --output-format json)
@@ -352,33 +356,7 @@ export async function swarmCommand(args, flags) {
     try {
       const { execSync, spawn } = await import('child_process');
 
-      // Check if claude command exists
-      let claudeAvailable = false;
-      try {
-        execSync('which claude', { stdio: 'ignore' });
-        claudeAvailable = true;
-      } catch {
-        console.log('⚠️  Claude Code CLI not found in PATH');
-        console.log('Install it with: npm install -g @anthropic-ai/claude-code');
-        console.log('\nWould spawn Claude Code with swarm objective:');
-        console.log(`📋 Objective: ${objective}`);
-        console.log(
-          '\nTo use the built-in executor instead: claude-flow swarm "objective" --executor',
-        );
-        return;
-      }
-
-      // Claude is available, use it to run swarm
-      console.log('🐝 Launching Claude Flow Swarm System...');
-      console.log(`📋 Objective: ${objective}`);
-      console.log(`🎯 Strategy: ${flags.strategy || 'auto'}`);
-      console.log(`🏗️  Mode: ${flags.mode || 'centralized'}`);
-      console.log(`🤖 Max Agents: ${flags['max-agents'] || 5}`);
-      if (isAnalysisMode) {
-        console.log(`🔍 Analysis Mode: ENABLED (Read-Only - No Code Changes)`);
-      }
-      console.log();
-
+      // Get configuration values first
       const strategy = flags.strategy || 'auto';
       const mode = flags.mode || 'centralized';
       const maxAgents = flags['max-agents'] || 5;
@@ -391,6 +369,7 @@ export async function swarmCommand(args, flags) {
       const enableSparc =
         flags.sparc !== false && (strategy === 'development' || strategy === 'auto');
 
+      // Build the complete swarm prompt before checking for claude
       const swarmPrompt = `You are orchestrating a Claude Flow Swarm with advanced MCP tool coordination.
 
 🎯 OBJECTIVE: ${objective}
@@ -787,6 +766,109 @@ Start by spawning a coordinator agent and creating the initial task structure. U
 
 The swarm should be self-documenting - use memory_store to save all important information, decisions, and results throughout the execution.`;
 
+      // If --claude flag is used, force Claude Code even if CLI not available
+      if (flags && flags.claude) {
+        console.log('🐝 Launching Claude Flow Swarm System...');
+        console.log(`📋 Objective: ${objective}`);
+        console.log(`🎯 Strategy: ${strategy}`);
+        console.log(`🏗️  Mode: ${mode}`);
+        console.log(`🤖 Max Agents: ${maxAgents}\n`);
+        
+        console.log('🚀 Launching Claude Code with Swarm Coordination');
+        console.log('─'.repeat(60));
+        
+        // Pass the prompt directly as an argument to claude
+        const claudeArgs = [swarmPrompt];
+        
+        // Add auto-permission flag by default for swarm mode (unless explicitly disabled)
+        if (flags['dangerously-skip-permissions'] !== false && !flags['no-auto-permissions']) {
+          claudeArgs.push('--dangerously-skip-permissions');
+          console.log('🔓 Using --dangerously-skip-permissions by default for seamless swarm execution');
+        }
+        
+        // Spawn claude with the prompt as the first argument (exactly like hive-mind does)
+        const claudeProcess = spawn('claude', claudeArgs, {
+          stdio: 'inherit',
+          shell: false,
+        });
+        
+        console.log('\n✓ Claude Code launched with swarm coordination prompt!');
+        console.log('  The swarm coordinator will orchestrate all agent tasks');
+        console.log('  Use MCP tools for coordination and memory sharing');
+        
+        console.log('\n💡 Pro Tips:');
+        console.log('─'.repeat(30));
+        console.log('• Use TodoWrite to track parallel tasks');
+        console.log('• Store results with mcp__claude-flow__memory_usage');
+        console.log('• Monitor progress with mcp__claude-flow__swarm_monitor');
+        console.log('• Check task status with mcp__claude-flow__task_status');
+        
+        // Set up clean termination
+        const cleanup = () => {
+          console.log('\n🛑 Shutting down swarm gracefully...');
+          if (claudeProcess && !claudeProcess.killed) {
+            claudeProcess.kill('SIGTERM');
+          }
+          process.exit(0);
+        };
+        
+        process.on('SIGINT', cleanup);
+        process.on('SIGTERM', cleanup);
+        
+        // Wait for claude to exit
+        claudeProcess.on('exit', (code) => {
+          if (code === 0) {
+            console.log('\n✓ Swarm execution completed successfully');
+          } else if (code !== null) {
+            console.log(`\n✗ Swarm execution exited with code ${code}`);
+          }
+          process.exit(code || 0);
+        });
+        
+        // Handle spawn errors (e.g., claude not found)
+        claudeProcess.on('error', (err) => {
+          if (err.code === 'ENOENT') {
+            console.error('\n❌ Claude Code CLI not found. Please install Claude Code:');
+            console.error('   https://claude.ai/download');
+          } else {
+            console.error('\n❌ Failed to launch Claude Code:', err.message);
+          }
+          process.exit(1);
+        });
+        
+        return;
+      }
+
+      // Check if claude command exists
+      let claudeAvailable = false;
+      try {
+        execSync('which claude', { stdio: 'ignore' });
+        claudeAvailable = true;
+      } catch {
+        console.log('⚠️  Claude Code CLI not found in PATH');
+        console.log('Install it with: npm install -g @anthropic-ai/claude-code');
+        console.log('Or use --claude flag to open Claude Code CLI');
+        console.log('\nWould spawn Claude Code with swarm objective:');
+        console.log(`📋 Objective: ${objective}`);
+        console.log('\nOptions:');
+        console.log('  • Use --executor flag for built-in executor: claude-flow swarm "objective" --executor');
+        console.log('  • Use --claude flag to open Claude Code CLI: claude-flow swarm "objective" --claude');
+        return;
+      }
+
+      // Claude is available, use it to run swarm
+      console.log('🐝 Launching Claude Flow Swarm System...');
+      console.log(`📋 Objective: ${objective}`);
+      console.log(`🎯 Strategy: ${flags.strategy || 'auto'}`);
+      console.log(`🏗️  Mode: ${flags.mode || 'centralized'}`);
+      console.log(`🤖 Max Agents: ${flags['max-agents'] || 5}`);
+      if (isAnalysisMode) {
+        console.log(`🔍 Analysis Mode: ENABLED (Read-Only - No Code Changes)`);
+      }
+      console.log();
+
+      // Continue with the default swarm behavior if not using --claude flag
+
       // Pass the prompt directly as an argument to claude
       const claudeArgs = [swarmPrompt];
 
@@ -812,8 +894,9 @@ The swarm should be self-documenting - use memory_store to save all important in
         claudeArgs.push('--output-format', 'stream-json'); // JSON streaming
         claudeArgs.push('--verbose'); // Verbose output
         
-        console.log('🤖 Running in non-interactive mode with Claude');
+        console.log('🤖 Running in non-interactive mode with Claude CLI');
         console.log('📋 Command: claude [prompt] -p --output-format stream-json --verbose');
+        console.log('💡 Tip: Use --claude flag to open Claude Code CLI instead');
       }
 
       // Spawn claude with the prompt as the first argument
@@ -1400,6 +1483,7 @@ OPTIONS:
   --verbose                  Enable detailed logging
   --dry-run                  Show configuration without executing
   --executor                 Use built-in executor instead of Claude Code
+  --claude                   Open Claude Code CLI
   --output-format <format>   Output format: json, text (default: text)
   --output-file <path>       Save output to file instead of stdout
   --no-interactive           Run in non-interactive mode (auto-enabled with --output-format json)
