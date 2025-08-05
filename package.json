@@ -4,7 +4,8 @@
   "description": "Revolutionary multilingual AI orchestration framework with cultural awareness and DDD architecture",
   "main": "cli.mjs",
   "bin": {
-    "claude-flow": "bin/claude-flow.js",
+    "claude-flow": "cli.js",
+    "claude-flow-multilang": "cli.js",
     "ddd-sparc": "bin/ddd-sparc.js"
   },
   "scripts": {
