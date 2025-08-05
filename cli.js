@@ -3,11 +3,15 @@
 // Fallback CLI entry point for claude-flow-multilang
 // This file ensures the package can be executed via npx
 
-const path = require('path');
-const { spawn } = require('child_process');
+import { spawn } from 'child_process';
+import { fileURLToPath } from 'url';
+import { dirname, join } from 'path';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
 
 // Try to run the main bin file
-const binPath = path.join(__dirname, 'bin', 'claude-flow.js');
+const binPath = join(__dirname, 'bin', 'claude-flow.js');
 
 const child = spawn('node', [binPath, ...process.argv.slice(2)], {
   stdio: 'inherit',
