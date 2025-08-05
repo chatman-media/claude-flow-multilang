@@ -104,6 +104,7 @@
   "files": [
     "cli.js",
     "bin/claude-flow.js",
+    "bin/ddd-sparc.js",
     "bin/claude-flow",
     "bin/claude-flow-dev",
     "bin/claude-flow-pkg.js",
