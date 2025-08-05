@@ -1,6 +1,6 @@
 {
   "name": "claude-flow-multilang",
-  "version": "3.0.0-multilang.4",
+  "version": "3.0.0-multilang.5",
   "description": "Revolutionary multilingual AI orchestration framework with cultural awareness and DDD architecture",
   "main": "cli.mjs",
   "bin": {
